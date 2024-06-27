@@ -18,7 +18,7 @@ const Navbar=()=>{
                         <span>Categories</span>
                     </button>
                  </div>
-                 <div className="flex-1  lg:flex-[4] flex lg:border-[1px] rounded-md">
+                 <div className="flex-1 px-2 lg:flex-[4] flex lg:border-[1px] lg:border-[#B0BABF] rounded-md">
                     <input className="w-[95%] hidden lg:block outline-none px-3" type="text" placeholder="DJI Phantom"  />
                     <span className="pt-[7px] md:pt-2  text-[16px]"><IoIosSearch/></span>
                  </div>
@@ -26,7 +26,7 @@ const Navbar=()=>{
                     <span className="text-[16px]"><FaHeart/></span>
                     <span className="text-[13px] hidden lg:block ">Favourites</span>
                  </div>
-                 <div className="flex-[0.5] hidden lg:flex justify-center items-center border-[1px] rounded-md hover:bg-red-400 hover:text-white cursor-pointer">
+                 <div className="flex-[0.5] hidden lg:flex justify-center items-center border-[1px] border-[#B0BABF]  rounded-md hover:bg-red-400 hover:text-white cursor-pointer">
                     <span>Sign In</span>
                  </div>
                  <div className="flex-1 flex justify-center items-center lg:hidden">

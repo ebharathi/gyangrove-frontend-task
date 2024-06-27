@@ -37,7 +37,7 @@ const Recommend = () => {
                                     <div className="flex w-full">
                                          <div className="flex-2 text-left">
                                                  <span className="text-[14px] text-white text-opacity-75  ">
-                                                    {rec?.eventName.length>20?rec?.eventName.substring(0,17)+'..':rec?.eventName}
+                                                    {rec?.eventName.length>23?rec?.eventName.substring(0,20)+'..':rec?.eventName}
                                                 </span>
                                          </div>
                                          <div className="flex-1 text-right">

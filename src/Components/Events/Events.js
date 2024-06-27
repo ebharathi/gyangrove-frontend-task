@@ -72,7 +72,7 @@ const Events = () => {
             </div>
             <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10  gap-y-14">
                 {events && events.length > 0 &&events.map((single, index) => (
-                    <div key={index} className="border-2 px-2 py-5 hover:p-1 rounded-lg hover:shadow-2xl cursor-pointer transition-padding duration-300 ease-in-out">
+                    <div key={index} className="border-[1px] border-[#B0BABF] px-2 py-5 hover:p-1 rounded-lg hover:shadow-2xl cursor-pointer transition-padding duration-300 ease-in-out">
                         <div className="relative">
                             <img src={IMG} alt={single.eventName} className="w-full rounded-lg" />
                             <div className="absolute bottom-0 py-2 px-2 flex-1 text-left bg-black bg-opacity-50 rounded-lg w-full">
