@@ -6,10 +6,10 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 const Navbar=()=>{
   return (
-    <div className="py-1 lg:py-3  text-black text-opacity-40    text-[13px]">
+    <div className="py-1 lg:py-3  text-[#b0babe]     text-[13px]">
         <div className="grid grid-cols-5 px-5 lg:px-20 ">
             <div className="col-span-4 lg:col-span-1 flex justify-start  lg:justify-center items-center">
-                <p className="text-red-400 text-[18px] font-bold text-center">BookUsNow</p>
+                <p className="text-[#CF2D2D] text-[18px] font-bold text-center">BookUsNow</p>
             </div>
             <div className="col-span-1 lg:col-span-4 flex gap-3 lg:gap-1">
                  <div className="flex-1 hidden lg:flex justify-end">
@@ -18,8 +18,8 @@ const Navbar=()=>{
                         <span>Categories</span>
                     </button>
                  </div>
-                 <div className="flex-1 px-2 lg:flex-[4] flex lg:border-[1px] lg:border-[#B0BABF] rounded-md">
-                    <input className="w-[95%] hidden lg:block outline-none px-3" type="text" placeholder="DJI Phantom"  />
+                 <div className="flex-1 pl-3 lg:flex-[4] flex lg:border-[1px] lg:border-[#B0BABF] rounded-md">
+                    <input className="w-[95%] hidden lg:block outline-none px-2" type="text" placeholder="DJI Phantom"  />
                     <span className="pt-[7px] md:pt-2  text-[16px]"><IoIosSearch/></span>
                  </div>
                  <div className="flex-1 hover:text-red-400 cursor-pointer flex justify-center items-center gap-2 ">
@@ -52,7 +52,7 @@ const Navbar=()=>{
                   </ul>
               </div>
         </div>
-        <div className="block lg:hidden overflow-x-auto text-[12px] py-3 hide-scrollbar pl-3">
+        <div className="block lg:hidden overflow-x-auto text-[12px] py-3 hide-scrollbar pl-5">
             <ul className="flex gap-8 whitespace-nowrap">
                 <li className="hover:text-red-400 cursor-pointer">Live shows</li>
                 <li className="hover:text-red-400 cursor-pointer">Streams</li>
@@ -60,7 +60,7 @@ const Navbar=()=>{
                 <li className="hover:text-red-400 cursor-pointer">Plays</li>
                 <li className="hover:text-red-400 cursor-pointer">Events</li>
                 <li className="hover:text-red-400 cursor-pointer">Sports</li>
-                <li className="hover:text-red-400 cursor-pointer">Activities</li>
+                <li className="hover:text-red-400 cursor-pointer pr-2">Activities</li>
             </ul>
         </div>
 

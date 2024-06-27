@@ -12,11 +12,11 @@ const Recommend = () => {
     },[]) 
   
     return (
-        <div className="recommend relative min-h-[800px] flex flex-col justify-start items-center lg:px-40 px-2 pt-28">
-            <p className="text-[24px] lg:text-[65px] font-light text-center leading-10 lg:leading-[75px] text-white">
+        <div className="recommend relative min-h-[800px] flex flex-col justify-start items-center lg:px-40 px-2 pt-20 lg:pt-40">
+            <p className="text-[24px] lg:text-[65px] font-light text-center leading-[50px] lg:leading-[75px] text-[#1E2022]">
                 Discover Exciting Events Happening Near You - Stay Tuned for Updates!
             </p>
-            <p className="text-white opacity-70 font-thin leading-7  text-[12px] lg:text-[16px]  text-center mt-5 lg:px-40 ">
+            <p className="text-[#989090] opacity-70 font-thin leading-7  text-[12px] lg:text-[16px]  text-center mt-5 lg:px-40 ">
               <span className="hidden lg:block ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec augue at nisl vehicula sagittis. Nullam in nisi non arcu pellentesque vestibulum. Fusce sit amet convallis dui. Proin ac ex eu dui ultricies auctor. </span>
               <span className="block lg:hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec augue at nisl vehicula sagittis. Nullam in nisi non arcu pellentesque</span>
             </p>
