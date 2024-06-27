@@ -5,47 +5,63 @@ import { getUpcomingEvents } from "../../utils/api";
 import { formatDate } from "../../utils/formatDate";
 import IMG from "../../assests/Rectangle3.svg";
 import { convertDriveUrl } from "../../utils/driveToUrl";
+
 const Events = () => {
     const [events, setEvents] = useState([]);
     const [pageNumber, setPageNumber] = useState(1);
     const [loading, setLoading] = useState(false);
-    const [hasMore,setHasMore]=useState(true);
+    const [hasMore, setHasMore] = useState(true);
+
     useEffect(() => {
+        const fetchInitialEvents = async () => {
+            setLoading(true);
+            try {
+                const response = await getUpcomingEvents(1);
+                if (response.error) {
+                    setHasMore(false);
+                } else {
+                    setEvents(response.events);
+                }
+            } catch (error) {
+                console.error('Error fetching events:', error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchInitialEvents();
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const handleScroll = () => {
-        if (loading) return; 
-        if (document.documentElement.offsetHeight - (window.innerHeight + document.documentElement.scrollTop) > 10 || loading) return;
+        if (loading || !hasMore) return;
+        if (document.documentElement.offsetHeight - (window.innerHeight + document.documentElement.scrollTop) > 10) return;
         setPageNumber((prevPageNumber) => prevPageNumber + 1);
     };
 
     useEffect(() => {
-        if (!pageNumber||!hasMore) return; 
-        setLoading(true);
-        setTimeout(() => {
-             //just to make loading time
-        }, 3000);
-        getUpcomingEvents(pageNumber).then((response) => {
-                if(response.error)
-                {
-                    //i want to remove the scroll effect if i reach here
+        if (pageNumber === 1 || !hasMore) return;
+        
+        const fetchMoreEvents = async () => {
+            setLoading(true);
+            try {
+                const response = await getUpcomingEvents(pageNumber);
+                if (response.error) {
                     setHasMore(false);
                     window.removeEventListener('scroll', handleScroll);
-                    setLoading(false);
+                } else {
+                    setEvents((prevEvents) => [...prevEvents, ...response.events]);
                 }
-                else
-                {
-                setEvents((prevEvents) => [...prevEvents, ...response?.events]);
+            } catch (error) {
+                console.error('Error fetching events:', error);
+            } finally {
                 setLoading(false);
-                }
-        }).catch(error => {
-            console.error('Error fetching events:', error);
-            setLoading(false); 
-        });
-    }, [pageNumber]);
+            }
+        };
 
+        fetchMoreEvents();
+    }, [pageNumber]);
     return (
         <div className="pt-[200px] lg:pt-[300px] px-5 lg:px-40">
             <div className="flex gap-3">

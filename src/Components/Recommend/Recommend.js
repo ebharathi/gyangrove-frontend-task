@@ -32,12 +32,12 @@ const Recommend = () => {
                 <div className="flex gap-5 lg:gap-10 overflow-x-auto overflow-y-hidden hide-scrollbar">
                     {recommendations.map((rec, index) => (
                         <div key={index} className="cursor-pointer relative  min-w-[250px] h-[400px] flex-shrink-0 rounded-lg transition-width duration-300 ease-in-out hover:min-w-[275px]">
-                            <div className="text-white z-10  absolute p-2 top-0 left-0 right-0 bottom-0 flex flex-col justify-end">
+                            <div className="text-white text-opacity-35 z-10  absolute p-2 top-0 left-0 right-0 bottom-0 flex flex-col justify-end">
                                 <div className="flex flex-col gap-1 text-[12px]">
                                     <div className="flex w-full">
                                          <div className="flex-2 text-left">
-                                                 <span className="text-[12px] ">
-                                                    {rec?.eventName.length>25?rec?.eventName.substring(0,20)+'..':rec?.eventName}
+                                                 <span className="text-[14px] text-white text-opacity-75  ">
+                                                    {rec?.eventName.length>20?rec?.eventName.substring(0,17)+'..':rec?.eventName}
                                                 </span>
                                          </div>
                                          <div className="flex-1 text-right">
