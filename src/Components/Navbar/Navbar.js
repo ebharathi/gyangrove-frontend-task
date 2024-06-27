@@ -6,8 +6,8 @@ import { IoIosArrowForward } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
 const Navbar=()=>{
   return (
-    <div className="py-1 lg:py-3 px-5 lg:px-20 text-black text-opacity-40    text-[13px]">
-        <div className="grid grid-cols-5 ">
+    <div className="py-1 lg:py-3  text-black text-opacity-40    text-[13px]">
+        <div className="grid grid-cols-5 px-5 lg:px-20 ">
             <div className="col-span-4 lg:col-span-1 flex justify-start  lg:justify-center items-center">
                 <p className="text-red-400 text-[18px] font-bold text-center">BookUsNow</p>
             </div>
@@ -34,7 +34,7 @@ const Navbar=()=>{
                  </div>
             </div>
         </div>
-        <div className="grid col-span-1 lg:grid-cols-5 lg:mt-3">
+        <div className="grid col-span-1 lg:grid-cols-5 lg:mt-3 px-5 lg:px-20">
               <div className="col-span-1 flex gap-2 justify-start lg:justify-center items-center text-[12px] lg:text-[13px]">
                    <span className=""><FaLocationDot/></span>
                    <span>Mumbai, India</span>
@@ -52,7 +52,7 @@ const Navbar=()=>{
                   </ul>
               </div>
         </div>
-        <div className="block lg:hidden overflow-x-auto text-[12px] py-3 hide-scrollbar">
+        <div className="block lg:hidden overflow-x-auto text-[12px] py-3 hide-scrollbar pl-3">
             <ul className="flex gap-8 whitespace-nowrap">
                 <li className="hover:text-red-400 cursor-pointer">Live shows</li>
                 <li className="hover:text-red-400 cursor-pointer">Streams</li>
