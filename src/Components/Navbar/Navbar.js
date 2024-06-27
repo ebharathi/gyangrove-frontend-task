@@ -53,7 +53,7 @@ const Navbar=()=>{
               </div>
         </div>
         <div className="block lg:hidden overflow-x-auto text-[12px] py-3 hide-scrollbar">
-            <ul className="flex gap-5 whitespace-nowrap">
+            <ul className="flex gap-8 whitespace-nowrap">
                 <li className="hover:text-red-400 cursor-pointer">Live shows</li>
                 <li className="hover:text-red-400 cursor-pointer">Streams</li>
                 <li className="hover:text-red-400 cursor-pointer">Movies</li>
