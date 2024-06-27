@@ -23,7 +23,7 @@ const Recommend = () => {
             {
             recommendations.length>0&&
                 <div className="absolute inset-x-0 -bottom-20 lg:-bottom-60  pl-4 lg:pl-40">
-                <div className="flex gap-2  mb-4 text-white opacity-75 text-[16px] lg:text-[20px] ">
+                <div className="flex gap-2  mb-4 text-white opacity-75 text-[18px] lg:text-[20px] ">
                      <p className="">Recommended Shows</p>
                      <div className="flex text-[24px] lg:text-[30px] items-center">
                         <HiOutlineArrowSmallRight/>
